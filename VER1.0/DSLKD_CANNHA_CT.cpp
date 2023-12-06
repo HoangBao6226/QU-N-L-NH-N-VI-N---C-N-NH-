@@ -21,7 +21,7 @@ void main()
             return;
         case 1:
         {
-            
+            dscn = themViTri(dscn);
             break;
         }
         case 2:
