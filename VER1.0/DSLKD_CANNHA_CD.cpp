@@ -49,3 +49,26 @@ bool kiemTraTrungMa(Nodeptr& list, char* ma)
 	}
 	return false;
 }
+
+Nodeptr timDonGia(Nodeptr& list)
+{
+	double dg;
+	cout << "Nhap don gia can nha muon tim kiem: ";
+	cin >> dg;
+	Nodeptr p = list;
+	Nodeptr q = NULL;
+	while (p != NULL)
+	{
+		if (p->data.donGia == dg)
+		{
+			if (q == NULL)
+				q = taoNode(p->data);
+			else
+			{
+				themDau(q, p->data);
+			}
+		}
+		p = p->next;
+	}
+	return q;
+}
