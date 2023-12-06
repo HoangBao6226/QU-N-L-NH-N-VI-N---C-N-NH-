@@ -2,6 +2,7 @@
 void main()
 {
 	Nodeptr dscn;
+	xuatDSCN(dscn); 
     int menu;
     do
     {
@@ -62,5 +63,6 @@ void main()
         }
         system("pause");
         system("cls");
+		xuatDSCN(dscn); 
     } while (menu != 0);
 }
