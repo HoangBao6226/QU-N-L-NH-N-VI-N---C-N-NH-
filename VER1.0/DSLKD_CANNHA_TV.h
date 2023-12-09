@@ -25,8 +25,4 @@ Nodeptr timDonGia(Nodeptr& list);
 Nodeptr timDienTich(Nodeptr& list);
 Nodeptr themViTri(Nodeptr& list);
 void nhapDSCN(Nodeptr& list);
-<<<<<<< HEAD
 void xuatDSCN(Nodeptr list);
-=======
-void xuatDSCN(Nodeptr list);
->>>>>>> 3ba424a1bb85a075cee8c88e43721e394f7b8826
