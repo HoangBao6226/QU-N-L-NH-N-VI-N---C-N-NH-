@@ -43,6 +43,7 @@ void main()
         }
         case 4:
         {
+            dscn =xoaMa(dscn);
             	xuatDSCN(dscn); 
             break;
         }
