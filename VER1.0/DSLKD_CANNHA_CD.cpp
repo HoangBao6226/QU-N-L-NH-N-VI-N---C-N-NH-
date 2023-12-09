@@ -49,7 +49,31 @@ bool kiemTraTrungMa(Nodeptr& list, char* ma)
 	}
 	return false;
 }
-
+void xuatDSCN(Nodeptr list)
+{
+	if (list == NULL)
+	{
+		cout << "Danh sach can nha rong!" << endl;
+		return;
+	}
+	cout << setw(10) << left << "STT" << "|";
+	cout << setw(20) << left << "Ma can nha" << "|";
+	cout << setw(20) << left << "Dien tich" << "|";
+	cout << setw(20) << left << "Don gia" << "|";
+	cout << setw(40) << left << "Dia chi" << endl;
+	cout << setfill('-');
+	cout << setw(120) << "-" << endl;
+	cout << setfill(' ');
+	int count = 1;
+	while (list != NULL)
+	{
+		cout << setw(10) << left << count++ << "|";
+		cout << setw(20) << left << list->data.maNha << "|";
+		cout << setw(20) << left << list->data.dienTich << "|";
+		cout << setw(20) << left << list->data.donGia << "|";
+		cout << setw(40) << left << list->data.diaChi << endl;
+		list = list->next;
+	}
 void nhapDSCN(Nodeptr& list)
 {
 	//khoiTao(list);
