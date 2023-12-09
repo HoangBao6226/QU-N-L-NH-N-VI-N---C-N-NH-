@@ -51,7 +51,7 @@ void main()
         }
         case 7:
         {
-            
+            sapXepDG_GiamDan(dscn);
             break;
         }
         default:
