@@ -136,6 +136,7 @@ Nodeptr themViTri(Nodeptr& list)
 	a->next = p->next;
 	p->next = a;
 	return list;
+}
 void xuatDSCN(Nodeptr list)
 {
 	if (list == NULL)
@@ -161,6 +162,7 @@ void xuatDSCN(Nodeptr list)
 		cout << setw(40) << left << list->data.diaChi << endl;
 		list = list->next;
 	}
+}
 void nhapDSCN(Nodeptr& list)
 {
 	//khoiTao(list);
