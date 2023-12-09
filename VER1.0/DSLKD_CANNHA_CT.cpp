@@ -23,16 +23,21 @@ void main()
             return;
         case 1:
         {
+            dscn = themViTri(dscn);
             	xuatDSCN(dscn); 
             break;
         }
         case 2:
         {
+            Nodeptr dscnDT;
+			dscnDT = timDienTich(dscn);
             	xuatDSCN(dscn); 
             break;
         }
         case 3:
         {
+            Nodeptr dscnDG;
+			dscnDG = timDienTich(dscn);
             	xuatDSCN(dscn); 
             break;
         }

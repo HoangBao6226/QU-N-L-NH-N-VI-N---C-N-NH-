@@ -49,6 +49,93 @@ bool kiemTraTrungMa(Nodeptr& list, char* ma)
 	}
 	return false;
 }
+Nodeptr timDienTich(Nodeptr& list)
+{
+	double dt;
+	cout << "Nhap dien tich can nha muon tim kiem: ";
+	cin >> dt;
+	Nodeptr p = list;
+	Nodeptr q = NULL;
+	while (p != NULL)
+	{
+		if (p->data.dienTich == dt)
+		{
+			if (q == NULL)
+				q = taoNode(p->data);
+			else
+			{
+				themDau(q, p->data);
+			}
+		}
+		p = p->next;
+	}
+	return q;
+}
+
+Nodeptr timDonGia(Nodeptr& list)
+{
+	double dg;
+	cout << "Nhap don gia can nha muon tim kiem: ";
+	cin >> dg;
+	Nodeptr p = list;
+	Nodeptr q = NULL;
+	while (p != NULL)
+	{
+		if (p->data.donGia == dg)
+		{
+			if (q == NULL)
+				q = taoNode(p->data);
+			else
+			{
+				themDau(q, p->data);
+			}
+		}
+		p = p->next;
+	}
+	return q;
+}
+Nodeptr themViTri(Nodeptr& list)
+{
+	int vt;
+	cout << "Nhap vi tri muon chen them can nha: ";
+	cin >> vt;
+	cin.ignore();
+	int dem = 0;
+	CanNha x;
+	Nodeptr p = list;
+	Nodeptr a = new Node;
+	cout << "Nhap ma can nha: ";
+	cin.getline(x.maNha, 10);
+	while (kiemTraTrungMa(p, x.maNha) || strcmp(x.maNha, "") == 0)
+	{
+		cout << "Ma nha khong hop le!" << endl;
+		cout << "Moi nhap lai: " << endl;
+		cin.getline(x.maNha, 10);
+	}
+	cout << "Nhap dien tich can nha: ";
+	cin >> x.dienTich;
+	cin.ignore();
+	cout << "Nhap don gia can nha: ";
+	cin >> x.donGia;
+	cin.ignore();
+	cout << "Nhap dia chi nha: ";
+	cin.getline(x.diaChi, 50);
+	a = taoNode(x);
+	if (vt == 1)
+	{
+		a->next = list;
+		return a;
+	}
+	while (p != NULL)
+	{
+		dem++;
+		if (dem == (vt - 1))
+			break;
+		p = p->next;
+	}
+	a->next = p->next;
+	p->next = a;
+	return list;
 void xuatDSCN(Nodeptr list)
 {
 	if (list == NULL)
