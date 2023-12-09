@@ -2,6 +2,8 @@
 void main()
 {
 	Nodeptr dscn;
+	nhapDSCN(dscn);
+  xuatDSCN(dscn); 
     int menu;
     do
     {
@@ -21,38 +23,42 @@ void main()
             return;
         case 1:
         {
-            
+            dscn = themViTri(dscn);
+            	xuatDSCN(dscn); 
             break;
         }
         case 2:
         {
-            
+            Nodeptr dscnDT;
+			dscnDT = timDienTich(dscn);
+            	xuatDSCN(dscn); 
             break;
         }
         case 3:
         {
             Nodeptr dscnDG;
 			dscnDG = timDienTich(dscn);
+            	xuatDSCN(dscn); 
             break;
         }
         case 4:
         {
-            
+            	xuatDSCN(dscn); 
             break;
         }
         case 5:
         {
-            
+            	xuatDSCN(dscn); 
             break;
         }
         case 6:
         {
-            
+            	xuatDSCN(dscn); 
             break;
         }
         case 7:
         {
-            
+            	xuatDSCN(dscn); 
             break;
         }
         default:
@@ -63,5 +69,6 @@ void main()
         }
         system("pause");
         system("cls");
+		xuatDSCN(dscn); 
     } while (menu != 0);
 }
