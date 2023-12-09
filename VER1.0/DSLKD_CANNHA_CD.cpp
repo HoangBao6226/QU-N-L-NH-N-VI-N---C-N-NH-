@@ -71,6 +71,29 @@ Nodeptr timDienTich(Nodeptr& list)
 	}
 	return q;
 }
+
+Nodeptr timDonGia(Nodeptr& list)
+{
+	double dg;
+	cout << "Nhap don gia can nha muon tim kiem: ";
+	cin >> dg;
+	Nodeptr p = list;
+	Nodeptr q = NULL;
+	while (p != NULL)
+	{
+		if (p->data.donGia == dg)
+		{
+			if (q == NULL)
+				q = taoNode(p->data);
+			else
+			{
+				themDau(q, p->data);
+			}
+		}
+		p = p->next;
+	}
+	return q;
+}
 Nodeptr themViTri(Nodeptr& list)
 {
 	int vt;

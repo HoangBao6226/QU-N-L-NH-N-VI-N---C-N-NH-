@@ -21,6 +21,7 @@ void giaiPhong(Nodeptr& list);
 Nodeptr taoNode(CanNha x);
 Nodeptr themDau(Nodeptr& list, CanNha x);
 bool kiemTraTrungMa(Nodeptr& list, char* ma);
+Nodeptr timDonGia(Nodeptr& list);
 Nodeptr timDienTich(Nodeptr& list);
 Nodeptr themViTri(Nodeptr& list);
 void nhapDSCN(Nodeptr& list);

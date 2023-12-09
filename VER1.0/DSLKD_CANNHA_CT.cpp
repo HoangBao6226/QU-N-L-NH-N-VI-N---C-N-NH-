@@ -36,6 +36,8 @@ void main()
         }
         case 3:
         {
+            Nodeptr dscnDG;
+			dscnDG = timDienTich(dscn);
             	xuatDSCN(dscn); 
             break;
         }
