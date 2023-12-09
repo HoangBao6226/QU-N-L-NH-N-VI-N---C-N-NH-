@@ -23,6 +23,7 @@ void main()
             return;
         case 1:
         {
+            dscn = themViTri(dscn);
             	xuatDSCN(dscn); 
             break;
         }
