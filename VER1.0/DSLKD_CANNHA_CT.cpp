@@ -2,7 +2,8 @@
 void main()
 {
 	Nodeptr dscn;
-	xuatDSCN(dscn); 
+	nhapDSCN(dscn);
+  xuatDSCN(dscn); 
     int menu;
     do
     {
@@ -22,37 +23,37 @@ void main()
             return;
         case 1:
         {
-            
+            	xuatDSCN(dscn); 
             break;
         }
         case 2:
         {
-            
+            	xuatDSCN(dscn); 
             break;
         }
         case 3:
         {
-            
+            	xuatDSCN(dscn); 
             break;
         }
         case 4:
         {
-            
+            	xuatDSCN(dscn); 
             break;
         }
         case 5:
         {
-            
+            	xuatDSCN(dscn); 
             break;
         }
         case 6:
         {
-            
+            	xuatDSCN(dscn); 
             break;
         }
         case 7:
         {
-            
+            	xuatDSCN(dscn); 
             break;
         }
         default:
