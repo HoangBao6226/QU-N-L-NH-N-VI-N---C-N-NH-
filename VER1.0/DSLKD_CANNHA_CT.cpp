@@ -55,6 +55,7 @@ void main()
         }
         case 6:
         {
+            sapXepDT_TangDan(dscn);
             	xuatDSCN(dscn); 
             break;
         }
