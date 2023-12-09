@@ -68,6 +68,28 @@ void sapXepDT_TangDan(Nodeptr& list)
 		}
 		p = p->next;
 	}
+}
+
+void sapXepDG_GiamDan(Nodeptr& list)
+{
+	Nodeptr p = list;
+	Nodeptr q;
+	while (p != NULL)
+	{
+		q = p->next;
+		while (q != NULL)
+		{
+			if (p->data.donGia < q->data.donGia)
+			{
+				CanNha temp = p->data;
+				p->data = q->data;
+				q->data = temp;
+			}
+			q = q->next;
+		}
+		p = p->next;
+	}
+}
 Nodeptr xoaDC(Nodeptr& list)
 {
 	Nodeptr p = list;
