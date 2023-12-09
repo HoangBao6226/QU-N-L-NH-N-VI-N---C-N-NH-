@@ -2,6 +2,7 @@
 void main()
 {
 	Nodeptr dscn;
+	nhapDSCN(dscn);
     int menu;
     do
     {
