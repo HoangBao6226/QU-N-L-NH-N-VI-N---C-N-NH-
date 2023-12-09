@@ -23,4 +23,3 @@ Nodeptr themDau(Nodeptr& list, CanNha x);
 bool kiemTraTrungMa(Nodeptr& list, char* ma);
 void nhapDSCN(Nodeptr& list);
 void xuatDSCN(Nodeptr list);
-
