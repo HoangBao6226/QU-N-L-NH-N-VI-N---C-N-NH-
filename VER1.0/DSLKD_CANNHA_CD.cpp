@@ -49,3 +49,23 @@ bool kiemTraTrungMa(Nodeptr& list, char* ma)
 	}
 	return false;
 }
+void sapXepDT_TangDan(Nodeptr& list)
+{
+	Nodeptr p = list;
+	Nodeptr q;
+	while (p != NULL)
+	{
+		q = p->next;
+		while (q != NULL)
+		{
+			if (p->data.dienTich > q->data.dienTich)
+			{
+				CanNha temp = p->data;
+				p->data = q->data;
+				q->data = temp;
+			}
+			q = q->next;
+		}
+		p = p->next;
+	}
+}
