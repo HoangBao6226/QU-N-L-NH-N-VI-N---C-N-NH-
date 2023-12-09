@@ -49,3 +49,30 @@ bool kiemTraTrungMa(Nodeptr& list, char* ma)
 	}
 	return false;
 }
+Nodeptr xoaDC(Nodeptr& list)
+{
+	Nodeptr p = list;
+	Nodeptr prev = NULL;
+	char DC[50];
+	cout << "Nhap dia chi can nha muon xoa: ";
+	cin.ignore();
+	cin.getline(DC, 50);
+	while (p != NULL)
+	{
+		if (strcmp(p->data.diaChi, DC)==0)
+		{
+			if (prev == NULL) {
+				prev = list;
+				list = list->next;
+				delete prev;
+				break;
+			}
+			prev->next = p->next;
+			delete p;
+			break;
+		}
+		prev = p;
+		p = p->next;
+	}
+	return list;
+}

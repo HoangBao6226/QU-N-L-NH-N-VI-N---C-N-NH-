@@ -36,12 +36,12 @@ void main()
         }
         case 4:
         {
-            
+            dscn =xoaMa(dscn);
             break;
         }
         case 5:
         {
-            
+            dscn =xoaDC(dscn);
             break;
         }
         case 6:
