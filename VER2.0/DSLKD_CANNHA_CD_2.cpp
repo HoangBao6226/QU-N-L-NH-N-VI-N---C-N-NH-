@@ -92,25 +92,30 @@ void sapXepDG_GiamDan(Nodeptr& list)
 }
 Nodeptr xoaDC(Nodeptr& list)
 {
-	Nodeptr p = list;
-	Nodeptr prev = NULL;
-	char DC[50];
+	char dc[50];
 	cout << "Nhap dia chi can nha muon xoa: ";
 	cin.ignore();
-	cin.getline(DC, 50);
+	cin.getline(dc, 50);
+	Nodeptr prev = list;
+	Nodeptr p = list;
 	while (p != NULL)
 	{
-		if (strcmp(p->data.diaChi, DC)==0)
-      {
-			if (prev == NULL) {
-				prev = list;
+		if (strcmp(p->data.diaChi, dc) == 0)
+		{
+			Nodeptr q = p;
+			if (p == list)
+			{
 				list = list->next;
-				delete prev;
-				break;
+				p = list;
+				prev = list;
 			}
-			prev->next = p->next;
-			delete p;
-			break;
+			else
+			{
+				prev->next = p->next;
+				p = p->next;
+			}
+			delete	q;
+			continue;
 		}
 		prev = p;
 		p = p->next;
