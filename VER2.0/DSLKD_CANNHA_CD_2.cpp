@@ -216,16 +216,16 @@ Nodeptr themViTri(Nodeptr& list)
 	cout << "Nhap dia chi nha: ";
 	cin.getline(x.diaChi, 50);
 	a = taoNode(x);
-	if (vt == 1)
+	if (vt == 0)
 	{
 		a->next = list;
 		return a;
 	}
 	while (p != NULL)
 	{
-		dem++;
 		if (dem == (vt - 1))
 			break;
+		dem++;
 		p = p->next;
 	}
 	a->next = p->next;
