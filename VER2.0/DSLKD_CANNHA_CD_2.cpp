@@ -260,7 +260,7 @@ void xuatDSCN(Nodeptr list)
 }
 void nhapDSCN(Nodeptr& list)
 {
-	//khoiTao(list);
+	khoiTao(list);
 	CanNha x;
 	do {
 		cout << "Nhap ma can nha (nhan Enter de thoat): ";
